@@ -44,7 +44,7 @@ def read_task(task_id: float):                                               # V
 def create_task(new_task: Task):                                            # Variable initialization.
 
     if any(i['task_id'] == new_task.task_id for i in task_db):              # Validation for task if it is existing.
-        return {"error": f"Task {new_task} already existing"}                           # Displaying the error statemnent.
+        return {"error": "Task already existing"}                           # Displaying the error statemnent.
     
     if new_task.task_id <= 0:                                                       # Validation of task for zero and negative numbers.
         return{"error": "Invalid task number input. Counting starts at '1'."}       # Displaying the error statemnent.
@@ -63,6 +63,9 @@ def update_task(task_id: float, task: Task):                                  # 
         return {"error": "Whole number only. Task ID must be a whole number."}
 
     task_id = int(task_id)  # Convert the valid float to int for further processing
+
+    if task_id <= 0:                                                                # Validation of task for zero and negative numbers.
+        return{"error": "Invalid task number input. Counting starts at '1'."}       # Displaying the error statemnent.
 
     if task_id:                                                             # Initialized if task_id is inputted correctly.
 
@@ -95,8 +98,12 @@ def delete_task(task_id: float):                                              # 
 
     if not task_id.is_integer():                                              # Check if task_id is not a whole number
         return {"error": "Whole number only. Task ID must be a whole number."}
-
+    
     task_id = int(task_id)  # Convert the valid float to int for further processing
+
+    if task_id <= 0:                                                                    # Validation of task for zero and negative numbers.
+        return{"error": "Invalid task number input. Counting starts at '1'."}           # Displaying the error statemnent.
+
 
     if task_id:
 
