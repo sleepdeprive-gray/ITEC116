@@ -113,10 +113,13 @@ def get_user_posts_with_comments(userID: int):
         post_id = comment["postId"]
         if post_id not in comments_by_post:
             comments_by_post[post_id] = []
+
         comments_by_post[post_id].append({
-            "commenter_email": comment["email"],
-            "commenter_name": comment["name"],
-            "comment_body": comment["body"]
+            "postId": comment["postId"],
+            "id": comment["id"],
+            "name": comment["name"],
+            "email": comment["email"],
+            "body": comment["body"]
         })
 
     user_posts_with_comments = {
