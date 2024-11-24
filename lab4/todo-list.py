@@ -1,8 +1,8 @@
 from fastapi import FastAPI, APIRouter, HTTPException, status, Depends, Header
 from pydantic import BaseModel
 from typing import List
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
 
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
@@ -10,7 +10,21 @@ API_KEY = os.getenv("API_KEY")
 application = FastAPI()
 
 def api_key_check(authorization: str = Header(None)):
-    if authorization is None:      
+    if authorization is None:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Authorization header missing."
+        )
+
+    if not authorization.startswith("Bearer "):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Authorization header must start with Bearer."
+        )
+
+    token = authorization[7:]
+    
+    if token != API_KEY:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Invalid API Key."
@@ -122,17 +136,15 @@ def update_task_v2(task_id: float, task: Task):
     
     for index, iteration in enumerate(task_db):
         if iteration["task_id"] == task_id:
-            # Validate if task title and description are not empty
+            
             if not task.task_title or not task.task_desc:
                 raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Task title and description cannot be empty.")
             
-            # Check if there are changes; if not, return error
             if (task_db[index]['task_title'] == task.task_title and
                 task_db[index]['task_desc'] == task.task_desc and
                 task_db[index]['is_finished'] == task.is_finished):
                 raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="No changes detected.")
-
-            # Validate the status value is either True or False
+            
             if task.is_finished not in [True, False]:
                 raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid task status.")
 
@@ -141,8 +153,7 @@ def update_task_v2(task_id: float, task: Task):
             task_db[index]['is_finished'] = task.is_finished
 
             return {"status": "ok", "updated_task": task_db[index]}
-    
-    # If the task with the given task_id does not exist, return a 404
+
     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Task {task_id} not found.")
 
 
