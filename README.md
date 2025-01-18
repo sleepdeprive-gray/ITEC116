@@ -1,13 +1,28 @@
 # API Portfolio
 
+<h3>Student Profile</h3>
+Full Name: Ivan P. Duran <br>
+Section: BSIT - 4E <br>
+Year Standing: 3rd Year Irregular
+<hr>
+
+<h3>Contents</h3>
+<ul>
+  <li>Laboratory 1: Factorial Calculator API</li> 
+  <li>Laboratory 2: Basic Task Management System<</li>
+  <li>Laboratory 3: Enhanced Task Management with Error Handling</li>
+  <li>Laboratory 4: Secure and Versioned Task Management API</li>
+  <li>Laboratory 5: Deployed API Links</li>
+  <li>Key Takeways</li>
+</ul>
+<hr>
+    
 <h4>Laboratory 1: Factorial Calculator API</h4>
 
 In this laboratory, I created a simple FastAPI application to manage tasks using different HTTP methods (GET, POST, PUT, DELETE). This activity served as a foundation to understand how APIs work and how to structure them. By working with FastAPI, I learned how to define routes for various operations such as fetching tasks, adding new ones, updating them, and deleting them. I also understood the importance of data validation and how APIs interact with data and return results in JSON format. This lab was a key step in building a strong foundation in API development, preparing me for more complex applications in the future.
-
-<b>Deployed API Link: https://itec116-duran-factorial.onrender.com/docs</b>
 <hr>
 
-<h4>Labratory 2: Basic Task Management System</h4>
+<h4>Laboratory 2: Basic Task Management System</h4>
 
 In this laboratory, I created a Task Management API using FastAPI, which allowed me to learn the basic structure of an API and how it functions. I designed a Task model with attributes like task_id, task_title, task_desc, and is_finished. Using Pydantic for validation, I created a simple in-memory database (task_db) to store tasks.
 
@@ -19,8 +34,6 @@ PUT: Update an existing task’s title, description, or status, with validation 
 DELETE: Remove a task by ID.
 
 This laboratory helped me grasp how APIs handle CRUD operations and served as a foundation for understanding FastAPI's structure and request handling.
-
-<b>Deployed API Link: https://itec116-duran-basic-task-management.onrender.com/docs</b>
 <hr>
 
 <h4>Laboratory 3: Enhanced Task Management with Error Handling</h4>
@@ -34,8 +47,6 @@ By doing this, I gained experience with:
 3. Combining different API calls into a single API
 
 This exercise helped me understand how to work with data from multiple sources and create an API that returns comprehensive and structured information to the user.
-
-<b>Deployed API Link: https://itec116-duran-tm-with-error-handling.onrender.com/docs</b>
 <hr>
 
 <h4>Laboratory 4: Secure and Versioned Task Management API</h4>
@@ -47,8 +58,15 @@ I first created a basic API to manage tasks with endpoints for creating, reading
 In version 2 of the API, I required a valid API key to access the routes, enhancing the security of the API. The key is checked via a custom api_key_check function, which ensures that the requests contain a valid API key in the header.
 
 This laboratory helped me better understand API development, versioning, and security practices. It also reinforced the importance of validation and error handling in creating robust APIs.
+<hr>
 
-<b>Deployed API Link: https://itec116-duran.onrender.com</b>
+<h4>Laboratory 5: Deployed API Links</h4>
+<ul>
+  <li>Laboratory 1: https://itec116-duran-factorial.onrender.com/docs</li>
+  <li>Laboratory 2: https://itec116-duran-basic-task-management.onrender.com/docs</li>
+  <li>Laboratory 3: https://itec116-duran-tm-with-error-handling.onrender.com/docs</li>
+  <li>Laboratory 4: https://itec116-duran.onrender.com</li>
+</ul>
 <hr>
 
 <h3>Key Takeways</h3>
