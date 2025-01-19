@@ -14,6 +14,7 @@ Year Standing: 3rd Year Irregular
   <li>Laboratory 4: Secure and Versioned Task Management API</li>
   <li>Laboratory 5: Deployed API Links</li>
   <li>Key Takeways</li>
+  <li>Credits</li>
 </ul>
 <hr>
     
@@ -27,11 +28,10 @@ In this laboratory, I created a simple FastAPI application to manage tasks using
 In this laboratory, I created a Task Management API using FastAPI, which allowed me to learn the basic structure of an API and how it functions. I designed a Task model with attributes like task_id, task_title, task_desc, and is_finished. Using Pydantic for validation, I created a simple in-memory database (task_db) to store tasks.
 
 The API supports four main operations:
-
-GET: Retrieve a task by ID.
-POST: Add a new task with validation checks for ID uniqueness and required fields.
-PUT: Update an existing task’s title, description, or status, with validation to ensure meaningful changes.
-DELETE: Remove a task by ID.
+1. GET: Retrieve a task by ID.
+2. POST: Add a new task with validation checks for ID uniqueness and required fields.
+3. PUT: Update an existing task’s title, description, or status, with validation to ensure meaningful changes.
+4. DELETE: Remove a task by ID.
 
 This laboratory helped me grasp how APIs handle CRUD operations and served as a foundation for understanding FastAPI's structure and request handling.
 <hr>
@@ -53,9 +53,11 @@ This exercise helped me understand how to work with data from multiple sources a
 
 In this laboratory, I created an API that manages tasks using FastAPI. The main goals of this lab were to implement a simple CRUD (Create, Read, Update, Delete) system with the addition of API versioning and API key authentication.
 
-I first created a basic API to manage tasks with endpoints for creating, reading, updating, and deleting tasks. The API accepts and returns JSON data using FastAPI’s built-in features. I also implemented API versioning by separating the routes into two versions: apiv1 and apiv2. In version 1, the responses are simple, while in version 2, I added more validation and authentication using API keys.
+I first created a basic API to manage tasks with endpoints for creating, reading, updating, and deleting tasks. The API accepts and returns JSON data using FastAPI’s built-in features. I also implemented API versioning by separating the routes into two versions: apiv1 and apiv2.
 
-In version 2 of the API, I required a valid API key to access the routes, enhancing the security of the API. The key is checked via a custom api_key_check function, which ensures that the requests contain a valid API key in the header.
+1. In version 1, the responses are simple, while in version 2, I added more validation and authentication using API keys.
+   
+2. In version 2 of the API, I required a valid API key to access the routes, enhancing the security of the API. The key is checked via a custom api_key_check function, which ensures that the requests contain a valid API key in the header.
 
 This laboratory helped me better understand API development, versioning, and security practices. It also reinforced the importance of validation and error handling in creating robust APIs.
 <hr>
@@ -63,7 +65,7 @@ This laboratory helped me better understand API development, versioning, and sec
 <h4>Laboratory 5: Deployed API Links</h4>
 <ul>
   <li>Laboratory 1: https://itec116-duran-factorial.onrender.com/docs</li>
-  <li>Laboratory 2: https://itec116-duran-basic-task-management.onrender.com/docs</li>
+  <li>Laboratory 2.5: https://itec116-duran-basic-task-management.onrender.com/docs</li>
   <li>Laboratory 3: https://itec116-duran-tm-with-error-handling.onrender.com/docs</li>
   <li>Laboratory 4: https://itec116-duran.onrender.com</li>
 </ul>
@@ -89,4 +91,7 @@ Through the laboratories, I gained valuable knowledge and skills in designing an
 8. Debugging and testing practices were strengthened by identifying and resolving issues in API logic and response structures, boosting my confidence in developing robust APIs.
 
 These takeaways highlight my progression in mastering API development, ensuring scalability, security, and efficiency in real-world scenarios.
+<hr>
 
+<h3>Acknowledgement</h3>
+This document was developed with assistance from <a href="">OpenAI's ChatGPT</a>, an AI tool used for brainstorming, drafting, and refining content.
