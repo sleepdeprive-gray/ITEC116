@@ -9,7 +9,7 @@ Year Standing: 3rd Year Irregular
 <h3>Contents</h3>
 <ul>
   <li>Laboratory 1: Factorial Calculator API</li> 
-  <li>Laboratory 2: Basic Task Management System<</li>
+  <li>Laboratory 2.5: Basic Task Management System<</li>
   <li>Laboratory 3: Enhanced Task Management with Error Handling</li>
   <li>Laboratory 4: Secure and Versioned Task Management API</li>
   <li>Laboratory 5: Deployed API Links</li>
@@ -22,7 +22,7 @@ Year Standing: 3rd Year Irregular
 In this laboratory, I created a simple FastAPI application to manage tasks using different HTTP methods (GET, POST, PUT, DELETE). This activity served as a foundation to understand how APIs work and how to structure them. By working with FastAPI, I learned how to define routes for various operations such as fetching tasks, adding new ones, updating them, and deleting them. I also understood the importance of data validation and how APIs interact with data and return results in JSON format. This lab was a key step in building a strong foundation in API development, preparing me for more complex applications in the future.
 <hr>
 
-<h4>Laboratory 2: Basic Task Management System</h4>
+<h4>Laboratory 2.5: Basic Task Management System</h4>
 
 In this laboratory, I created a Task Management API using FastAPI, which allowed me to learn the basic structure of an API and how it functions. I designed a Task model with attributes like task_id, task_title, task_desc, and is_finished. Using Pydantic for validation, I created a simple in-memory database (task_db) to store tasks.
 
