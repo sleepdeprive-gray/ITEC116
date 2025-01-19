@@ -9,7 +9,7 @@ Year Standing: 3rd Year Irregular
 <h3>Contents</h3>
 <ul>
   <li>Laboratory 1: Factorial Calculator API</li> 
-  <li>Laboratory 2.5: Basic Task Management System<</li>
+  <li>Laboratory 2.5: Basic Task Management System</li>
   <li>Laboratory 3: Enhanced Task Management with Error Handling</li>
   <li>Laboratory 4: Secure and Versioned Task Management API</li>
   <li>Laboratory 5: Deployed API Links</li>
